@@ -9,6 +9,6 @@ export class ProjectsService {
   constructor( private http: HttpClient ) { }
 
   public getProjects() {
-    return this.http.get("http://localhost:3000/projects")
+    return this.http.get("http://localhost:8069/projects")
   }
 }
