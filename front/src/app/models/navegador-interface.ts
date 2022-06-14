@@ -1,12 +1,12 @@
-export interface projects {
+export interface projectsInterface {
     name: string;
     description: string,
     URL: string;
-    image: imgPro;
+    image: imgProInterface;
 
 }
 
-export interface imgPro {
+export interface imgProInterface {
     alt: string;
     link: string
 }
