@@ -1,25 +1,20 @@
-<h2>Gestion</h2>
 <section class="gestion">
+    <h2>Gestion</h2>
     <form [formGroup]="projectsForm" (ngSubmit)="onSubmit()">
-      <label for="name">Nombre</label>
+      <label for="title">Nombre</label>
       <input type="text" id="name" formControlName="name" placeholder="Nombre" />
+
       <label for="cover">Descripcion</label>
       <input type="text" id="description" formControlName="description" placeholder="Descripcion" />
+
       <label for="author">Gitlab</label>
-      <input
-        type="text"
-        id="URL"
-        formControlName="URL"
-        placeholder="Gitlab"
-      />
+      <input type="text" id="URL" formControlName="URL" placeholder="Gitlab"/>
+
       <label for="company">Enlace Imagen</label>
-      <input
-        type="text"
-        id="image"
-        formControlName="image"
-        placeholder="Enlace Imagen"
-      />
+      <input type="text" id="image" formControlName="image" placeholder="Enlace Imagen"/>
       <button type="submit">Actualizar</button>
+
       <button *ngIf="projectsID" (click)="delete()">Borrar Proyecto</button>
+
     </form>
   </section>
