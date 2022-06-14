@@ -30,7 +30,7 @@ export class GestionComponent implements OnInit {
       image: [this.newProjects.image, [Validators.required, Validators.minLength(1)]]
     });
 
-    //De esta forma añadimos al objeto por defecto de newProjects los valores del formulario automaticamente según vayan cambiando.
+
     this.projectsForm.valueChanges.subscribe((changes) => {
       this.newProjects = changes;
     })
@@ -38,7 +38,10 @@ export class GestionComponent implements OnInit {
 
   public onSubmit() {
     if (this.projectsID !== "") {
+      console.log(this.newProjects);
+      
       this.ProjectsService.putProjects(this.projectsID, this.newProjects).subscribe()
+  
       alert("Projects edited");
     } else {
       this.ProjectsService.postProjects(this.newProjects).subscribe();

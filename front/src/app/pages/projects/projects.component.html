@@ -1,9 +1,9 @@
 <h2>Projects</h2>
-<article>
+<article *ngIf="projects">
     <figure *ngFor="let project of projects">
         <h3>{{project.name}}</h3>
         <img src="{{project.image.link}}" alt="{{project.name}}">
         <p>{{project.description}}</p>
-
+        <button (click)="editProject(project)">Edit</button>
     </figure>
 </article>
