@@ -10,7 +10,10 @@ const ProjectsSchema = new Schema(
     image: {
       alt: { type: String, required: false },
       link: { type: String, required: false }
-    }
+    },
+    id_herramientas: [
+      { type: Schema.Types.ObjectId, ref: "Herramientas", required: false },
+    ]
   },
   { timestamps: true }
 );
