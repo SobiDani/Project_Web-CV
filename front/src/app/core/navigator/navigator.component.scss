@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+//Global
+
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&display=swap');
+
+nav{
+    font-family: 'Charis SIL', serif;
+
+}
+a{
+    text-transform: uppercase;
+    color: black;
+  display: flex;
+  display: direction row;
+
+   
+}
+img{
+    height: 90px;
+    width: 90px;
+}
