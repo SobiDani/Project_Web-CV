@@ -1,26 +1,41 @@
-nav{
-    font-family: 'Charis SIL', serif;
+nav {
+  font-family: "Charis SIL", serif;
 
-}
-a{
-    text-transform: uppercase;
-    color: black;
-  display: flex;
-  display: direction row;
-
-  &:hover{
-    color: #EF5350;
-}
-}
-img{
-    height: 90px;
-    width: 90px;
-}
-.list{
-    height: 20vh;
-    background-color: aqua;
+  ul{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
+  }
+
+  height: 10vh;
+  background-color: rgb(189, 255, 255);
+  -webkit-box-shadow: 0px 15px 21px 3px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 15px 21px 3px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 15px 21px 3px rgba(0, 0, 0, 0.24);
+
+  a {
+    text-transform: uppercase;
+    color: black;
+    display: flex;
+    display: direction row;
+    transition: 0.4s;
+
+    &:hover {
+        transition: 0.4s;
+      color: #4ba8ff;
+      transform: scale(1.25);
+    }
+  }
+
+  .list{
+    margin-top: 0.5em;
+   }
+
+  img {
+    margin-top: 0.5em;
+    width: 3.5em;
+  }
+
+  
 }
