@@ -10,7 +10,7 @@ import { projectsInterface, herramientasInterface } from 'src/app/models/navegad
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
+  public visibleEdit: boolean = false;
   public projects?: projectsInterface[];
 
   constructor(private projecstService: ProjectsService, private router: Router) { }
@@ -29,5 +29,7 @@ export class ProjectsComponent implements OnInit {
 
   public editProject(project: any){
     this.projecstService.editItem(project)
+    this.visibleEdit = true;
+    console.log(this.visibleEdit);
     this.router.navigate(["/gestion"])
   }}

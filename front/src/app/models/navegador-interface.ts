@@ -2,15 +2,10 @@ export interface projectsInterface {
     name: string;
     description: string,
     URL: string;
-    image: imgProInterface;
+    image: string;
     _id: string;
     id_herramientas: string[];
 
-}
-
-export interface imgProInterface {
-    alt: string;
-    link: string
 }
 
 export interface herramientasInterface{

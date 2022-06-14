@@ -13,13 +13,12 @@ export class GestionComponent implements OnInit {
   public submmited: boolean = false;
   public newProjects = this.ProjectsService.ProjectsData;
   public projectsID = this.ProjectsService.ProjectsData._id;
-
+  public visibleEdit?: boolean; 
   constructor(private formBuilder: FormBuilder, private ProjectsService: ProjectsService, private router: Router) {
     
    }
 
   ngOnInit(): void {
-    
     
     this.ProjectsService.clearProjects();
 
@@ -55,6 +54,7 @@ export class GestionComponent implements OnInit {
   public delete() {
     this.ProjectsService.deleteProjects(this.newProjects._id).subscribe();
     this.ProjectsService.clearProjects();
+    this.visibleEdit = false;
     alert("Projects deleted");
     this.router.navigate(["/projects"]);
   }
