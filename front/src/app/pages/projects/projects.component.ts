@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.projecstService.getProjects().subscribe((data: any) => {
-      this.projects = data;
+      this.projects = data.Projects;
       console.log(this.projects);
     })
   }
