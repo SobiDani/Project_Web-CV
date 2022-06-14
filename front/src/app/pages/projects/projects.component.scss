@@ -1,11 +1,9 @@
-
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   figure {
-    
     width: 40%;
     /* height: 15em; */
     display: flex;
@@ -18,22 +16,25 @@ article {
     img {
       height: 80%;
       width: fit-content;
+      border-radius: 30px;
+      -webkit-filter: drop-shadow(2px 2px 0 #003893)
+        drop-shadow(-2px -2px 0 #003893);
+      filter: drop-shadow(2px 2px 0 #003893) drop-shadow(-2px -2px 0 #003893);
     }
   }
 
   p {
     text-align: center;
   }
-  
 }
-h2{
+h2 {
   text-align: center;
   margin: 5vh;
   text-transform: uppercase;
-  font-family: 'Charis SIL', serif;
+  font-family: "Charis SIL", serif;
 }
 
-.herramientas{
+.herramientas {
   display: flex;
   flex-direction: wrap;
   justify-content: center;

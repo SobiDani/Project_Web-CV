@@ -31,7 +31,6 @@ export class ProjectsService {
   }
 
   public getProjects() {
-    console.log(this.http.get("http://localhost:8069/projects"));
     return this.http.get("http://localhost:8069/projects")
     
   }
@@ -47,6 +46,4 @@ export class ProjectsService {
   public deleteProjects(projectsID: any){
     return this.http.delete("http://localhost:8069/projects/" + projectsID)
   }
-
- 
 }
