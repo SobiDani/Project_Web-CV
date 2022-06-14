@@ -20,6 +20,6 @@
         placeholder="Enlace Imagen"
       />
       <button type="submit">Actualizar</button>
-      <button (click)="delete()">Borrar Proyecto</button>
+      <button *ngIf="projectsID" (click)="delete()">Borrar Proyecto</button>
     </form>
   </section>
