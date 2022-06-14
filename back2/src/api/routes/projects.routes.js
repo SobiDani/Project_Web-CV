@@ -16,6 +16,6 @@ router.get("/", getAllProjects);
 router.get("/:id", getProjectsByID);
 router.post("/"/* ,[isAuth] */, upload.single("image"), createProjects);
 router.delete('/:id'/* ,[isAuth] */, upload.single("image"), deleteProjects);
-router.patch('/:id',[isAuth], upload.single("image"), patchProjects)
+router.patch('/:id'/* ,[isAuth] */, upload.single("image"), patchProjects)
 
 module.exports = router;

@@ -1,7 +1,7 @@
 <section class="gestion">
     <h2>Gestion</h2>
     <form [formGroup]="projectsForm" (ngSubmit)="onSubmit()">
-      <label for="title">Nombre</label>
+      <label for="name">Nombre</label>
       <input type="text" id="name" formControlName="name" placeholder="Nombre" />
       <label for="cover">Descripcion</label>
       <input type="text" id="description" formControlName="description" placeholder="Descripcion" />
@@ -20,6 +20,6 @@
         placeholder="Enlace Imagen"
       />
       <button type="submit">Actualizar</button>
-      <!-- <button (click)="delete()">Borrar Proyecto</button> -->
+      <button (click)="delete()">Borrar Proyecto</button>
     </form>
   </section>
