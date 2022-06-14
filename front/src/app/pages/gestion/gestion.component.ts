@@ -20,12 +20,12 @@ export class GestionComponent implements OnInit {
 
   ngOnInit(): void {
     
-    //Con esta función siempre tendremos el formulario desde el comienzo.
+    
     this.ProjectsService.clearProjects();
 
     this.projectsForm = this.formBuilder.group({
       name: [this.newProjects.name, [Validators.required, Validators.minLength(1)]],
-      descripction: [this.newProjects.description, [Validators.required, Validators.minLength(4)]],
+      description: [this.newProjects.description, [Validators.required, Validators.minLength(4)]],
       URL: [this.newProjects.URL, [Validators.required]],
       image: [this.newProjects.image, [Validators.required, Validators.minLength(1)]]
     });
