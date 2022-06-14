@@ -37,7 +37,8 @@ const createProjects = async (req, res, next) => {
   try {
     const newProjects = new Projects(req.body);
     if (req.file) {
-      newProjects.image.link = req.file.path;
+      newProjects.image = req.file.path;
+      
     }
     const createdProjects = await newProjects.save();
     return res.json({
