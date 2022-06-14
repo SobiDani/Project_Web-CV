@@ -6,7 +6,7 @@ const HTTPSTATUSCODE = require("../../utils/httpStatusCode")
 
 const getAllProjects = async (req, res, next) => {
   try {
-    const allProjects = await Projects.find();
+    const allProjects = await Projects.find().populate("id_herramientas");
     return res.json({
       status: 200,
       message: HTTPSTATUSCODE[200],

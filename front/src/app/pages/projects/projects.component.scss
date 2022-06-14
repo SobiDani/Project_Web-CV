@@ -4,8 +4,9 @@ article {
   align-items: center;
 
   figure {
+    padding: 1rem;
     width: 40%;
-    height: 15em;
+    /* height: 15em; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,4 +23,17 @@ article {
   p {
     text-align: center;
   }
+  
+}
+h2{
+  text-align: center;
+  margin: 5vh;
+  text-transform: uppercase;
+  font-family: 'Charis SIL', serif;
+}
+
+.herramientas{
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
 }

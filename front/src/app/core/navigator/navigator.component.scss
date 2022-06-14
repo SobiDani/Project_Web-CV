@@ -8,9 +8,19 @@ a{
   display: flex;
   display: direction row;
 
-   
+  &:hover{
+    color: #EF5350;
+}
 }
 img{
     height: 90px;
     width: 90px;
+}
+.list{
+    height: 20vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
 }
