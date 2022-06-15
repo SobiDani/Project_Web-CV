@@ -1,12 +1,18 @@
+<div class="space"></div>
 <article *ngIf="projects">
     <figure *ngFor="let project of projects">
         <h3>{{project.name}}</h3>
-        <img src="{{project.image}}" alt="{{project.name}}">
+        <img class="imgP" src="{{project.image}}" alt="{{project.name}}">
         <p>{{project.description}}</p>
-        <a target="_blank" href="{{project.URL}}">CLICK TO WATCH CODE</a>
+        <h4>URL:</h4>
+        <a target="_blank" href="{{project.URL}}">
+         <img src="../../../assets/toppng.com-github-logo-png-2000x665.png" alt=""></a>
+         <h4>programming language:</h4>
         <app-herramientas class="herramientas" [herramientasInfo]="project.id_herramientas"></app-herramientas>
-        
-        <button (click)="editProject(project)">Edit</button>
+        <div class="boton">
+            <button role="button"(click)="editProject(project)"><p>Edit</p></button>
+
+    </div>
 
     </figure>
 </article>

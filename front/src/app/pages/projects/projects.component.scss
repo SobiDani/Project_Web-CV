@@ -1,23 +1,39 @@
+.space{
+  margin-top: -1em;
+}
+
 article {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: 2em 0;
 
   figure {
-    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(136, 229, 255) 100%);
-    width: 45%;
-    /* height: 15em; */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.191) 0%, rgba(136, 229, 255, 0.178) 100%);
+    width: 42%;
+    
+     height: 51em; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px rgba(0, 0, 0, 0.484) double;
+    box-shadow: 1px 1px 17px -1px rgba(220, 194, 255, 0.5) inset;
+-webkit-box-shadow: 1px 1px 17px -1px rgba(220,194,255,0.5) inset;
+-moz-box-shadow: 1px 1px 17px -1px rgba(220,194,255,0.5) inset;
     border-radius: 50px;
     margin: 2em 0;
+
     h3{
-      margin: 2rem 0rem;
+      margin: 1rem 0 0 0;
+      color: rgb(55, 228, 255);
+      font-size: 2em;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-shadow: 0px 0px 16px rgba(97,164,255,0.6);
     }
-    img {
+
+    .imgP{
       margin: 1.5rem 0rem;
       height: 16em;
       width: fit-content;
@@ -27,31 +43,73 @@ article {
       filter: drop-shadow(2px 2px 0 #003893) drop-shadow(-2px -2px 0 #003893);
     }
     p{
-      margin: 1.2rem 0rem;
+      margin: 0.5rem 0 1rem 0;
       padding: 1rem;
-      font-size: 2rem;  
+      font-size: 1.3rem;  
+      color: white;
+      text-shadow: 0px 0px 16px rgb(0, 0, 0);
     }
 
-    button{
+    .boton{
+      display: flex;
+      justify-content: end;
+      align-items: flex-end;
+      height: 8%;
       width: 80%;
-      margin: 2rem 0rem;
-      height: 2rem;
-      border-radius: 50px;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40%;
+      width: 14%;
+      color: #090909;
+      padding: 0.5em 2em 0 2em;
+      font-size: 18px;
+      border-radius: 0.5em;
+      background: #41467e71;
+      border: 1px solid #233261;
+      transition: all .3s;
+      box-shadow: 6px 6px 12px #3a58b4,
+                  -6px -6px 12px #6788ee;
+                  p{
+                    font-size: 14px;
+                    color: rgb(165, 165, 165);
+                  }
+     }
+     
+     button:hover {
+      border: 1px solid rgb(47, 192, 255);
+     }
+     
+     button:active {
+      box-shadow: 4px 4px 12px #3a58b4,
+                  -4px -4px 12px #6788ee;
+     }
+
+    a{
+      font-size: 2em;
+      margin-bottom: 1em;
+      text-align: center;
+      img{
+        width: 6em;
+        height: 2em;
+      }
+    }
+
+    h4{
+      margin-bottom: 1em;
+      text-decoration: underline;
     }
   }
 
-  a{
-    font-size: 2em;
-    margin-bottom: 1em;
-  }
+  
 
   p {
     text-align: center;
   }
 
-  h3{
-    font-size: 2.5em;
-  }
+
   
   .herramientas {
     width: 100%;
