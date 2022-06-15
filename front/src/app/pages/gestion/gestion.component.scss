@@ -45,6 +45,11 @@
         background-color: red;
         color: white;
       }
+      app-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
 
 }
 

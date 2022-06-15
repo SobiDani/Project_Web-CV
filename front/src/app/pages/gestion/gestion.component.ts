@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProjectsService } from 'src/app/services/projects.service';
+import { projectsInterface, herramientasInterface } from 'src/app/models/navegador-interface';
 
 @Component({
   selector: 'app-gestion',
@@ -13,8 +14,14 @@ export class GestionComponent implements OnInit {
   public submmited: boolean = false;
   public newProjects = this.ProjectsService.ProjectsData;
   public projectsID = this.ProjectsService.ProjectsData._id;
-  public visibleEdit?: boolean; 
-  constructor(private formBuilder: FormBuilder, private ProjectsService: ProjectsService, private router: Router) {
+  public herramientas?: any[]; 
+  public divHerramientas$$: any = document.querySelectorAll('.herramientasDiv');
+  public selectValores?: any[];
+  public selectedHerramienta?: any[] = [];
+  public htmlToAdd?: any;
+  public objetoHerramienta?: any;
+
+  constructor(private formBuilder: FormBuilder, private HerramientasService: ProjectsService, private ProjectsService: ProjectsService, private router: Router) {
     
    }
 
@@ -26,18 +33,27 @@ export class GestionComponent implements OnInit {
       name: [this.newProjects.name, [Validators.required, Validators.minLength(1)]],
       description: [this.newProjects.description, [Validators.required, Validators.minLength(4)]],
       URL: [this.newProjects.URL, [Validators.required]],
-      image: [this.newProjects.image, [Validators.required, Validators.minLength(1)]]
+      image: [this.newProjects.image, [Validators.required, Validators.minLength(1)]],
+      id_herramientas: [this.newProjects.id_herramientas, [Validators.minLength(1)]],
     });
 
 
     this.projectsForm.valueChanges.subscribe((changes) => {
       this.newProjects = changes;
     })
+
+    this.HerramientasService.getHerramientas().subscribe((data: any) => {
+      this.herramientas = data.Herramientas;
+
+     /*  console.log(data.Herramientas); */
+      
+    })
   }
 
   public onSubmit() {
+    console.log(this.newProjects);
     if (this.projectsID !== "") {
-      console.log(this.newProjects);
+      
       
       this.ProjectsService.putProjects(this.projectsID, this.newProjects).subscribe()
   
@@ -54,9 +70,21 @@ export class GestionComponent implements OnInit {
   public delete() {
     this.ProjectsService.deleteProjects(this.newProjects._id).subscribe();
     this.ProjectsService.clearProjects();
-    this.visibleEdit = false;
     alert("Projects deleted");
     this.router.navigate(["/projects"]);
+  }
+
+  public crearHerramienta(evento: any) {
+    
+
+    this.selectValores = evento.target.value.split("-.-");
+    
+    this.selectedHerramienta?.push(this.selectValores);
+
+    /* console.log(this.selectedHerramienta); */
+
+    /* this.htmlToAdd = "<input type='text' value="+evento.target.value+" formControlName='id_herramientas' "; */
+    /* this.htmlToAdd = '<span><input type="text"/></span>'; */
   }
 
 }
