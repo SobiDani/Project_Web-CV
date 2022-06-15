@@ -39,6 +39,7 @@ export class GestionComponent implements OnInit {
 
 
     this.projectsForm.valueChanges.subscribe((changes) => {
+      console.log(changes);
       this.newProjects = changes;
     })
 
@@ -51,7 +52,7 @@ export class GestionComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log(this.newProjects);
+    /* console.log(this.newProjects); */
     if (this.projectsID !== "") {
       
       

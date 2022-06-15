@@ -56,7 +56,7 @@ const deleteHerramientas = async (req, res, next) => {
   
       const herramientaBorrado = await Herramienta.findByIdAndDelete(id);
   
-      return res.status(200).json(Borrado);
+      return res.status(200).json(herramientaBorrado);
     } catch (error) {
       return next(error);
     }

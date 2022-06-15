@@ -9,6 +9,7 @@ import { GestionComponent } from './pages/gestion/gestion.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HerramientasComponent } from './pages/projects/herramientas/herramientas.component';
+import { InputComponent } from './pages/gestion/input/input.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HerramientasComponent } from './pages/projects/herramientas/herramienta
     ProjectsComponent,
     GestionComponent,
     HomeComponent,
-    HerramientasComponent
+    HerramientasComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

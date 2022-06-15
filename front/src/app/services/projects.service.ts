@@ -4,16 +4,23 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProjectsService {
 
   constructor( private http: HttpClient ) { }
+
+  public getHerramientas() {
+    return this.http.get("http://localhost:8069/herramientas")
+    
+  }  
 
   public ProjectsData = {
     name: "",
     description: "",
     URL: "",
     image: "",
-    _id: ""
+    _id: "",
+    id_herramientas: "",
   }
 
   public clearProjects() {
@@ -22,7 +29,8 @@ export class ProjectsService {
       description: "",
       URL: "",
       image: "",
-      _id: ""
+      _id: "",
+      id_herramientas: "",
     }
   }
   
