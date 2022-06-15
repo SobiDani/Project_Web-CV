@@ -55,7 +55,7 @@ export class ProjectsService {
   }
 
   public putProjects(projectsID: any, editedProjects: any) {
-    return this.http.put("http://localhost:8069/projects/" + projectsID, editedProjects)
+    return this.http.patch("http://localhost:8069/projects/" + projectsID, editedProjects)
   }
 
   public deleteProjects(projectsID: any){
