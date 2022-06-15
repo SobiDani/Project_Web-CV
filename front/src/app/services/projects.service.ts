@@ -9,6 +9,10 @@ export class ProjectsService {
 
   constructor( private http: HttpClient ) { }
 
+  public getUsers() {
+    return this.http.get("http://localhost:8069/users")
+  }
+
   public getHerramientas() {
     return this.http.get("http://localhost:8069/herramientas")
     
