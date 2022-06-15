@@ -88,9 +88,19 @@ export class GestionComponent implements OnInit {
   public crearHerramienta(evento: any) {
     
 
-    /* this.selectValores = .split("-.-"); */
+    /* this.selectValores = evento.target.value.split(" "); */
     
-    this.selectedHerramienta?.push(evento.target.value);
+    /* this.selectedHerramienta?.push(evento.target.value); */
+
+    this.HerramientasService.getHerramientasId(evento.target.value.split(" ")).subscribe((data: any) => {
+      
+      console.log(data.Herramienta);
+
+      this.selectedHerramienta?.push(data.Herramienta);
+
+     /*  console.log(data.Herramientas); */
+      
+    });
 
     /* console.log(this.selectedHerramienta); */
 

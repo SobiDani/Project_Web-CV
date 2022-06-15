@@ -12,7 +12,12 @@ export class ProjectsService {
   public getHerramientas() {
     return this.http.get("http://localhost:8069/herramientas")
     
-  }  
+  }
+  public getHerramientasId(idHerramientas: any) {
+    console.log(idHerramientas[1].replace("\'", "").replace("\'", ""));
+    return this.http.get("http://localhost:8069/herramientas/id/" + idHerramientas[1].replace("\'", "").replace("\'", ""))
+    
+  }    
 
   public ProjectsData = {
     name: "",
