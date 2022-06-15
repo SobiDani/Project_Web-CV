@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { projectsInterface, herramientasInterface } from 'src/app/models/navegador-interface';
@@ -22,25 +22,32 @@ export class GestionComponent implements OnInit {
   public objetoHerramienta?: any;
 
   constructor(private formBuilder: FormBuilder, private HerramientasService: ProjectsService, private ProjectsService: ProjectsService, private router: Router) {
+    this.formBuilder.group({
+      name: String,
+      description: String,
+      URL: String,
+      image: String,
+      id_herramientas: this.newProjects.id_herramientas,   
+    })
     
    }
 
   ngOnInit(): void {
     
     this.ProjectsService.clearProjects();
-
     this.projectsForm = this.formBuilder.group({
       name: [this.newProjects.name, [Validators.required, Validators.minLength(1)]],
       description: [this.newProjects.description, [Validators.required, Validators.minLength(4)]],
       URL: [this.newProjects.URL, [Validators.required]],
       image: [this.newProjects.image, [Validators.required, Validators.minLength(1)]],
-      id_herramientas: [this.newProjects.id_herramientas, [Validators.minLength(1)]],
+      id_herramientas: [this.newProjects.id_herramientas],
     });
 
-
+    
     this.projectsForm.valueChanges.subscribe((changes) => {
-      console.log(changes);
+      
       this.newProjects = changes;
+      console.log(this.newProjects);
     })
 
     this.HerramientasService.getHerramientas().subscribe((data: any) => {
@@ -78,9 +85,19 @@ export class GestionComponent implements OnInit {
   public crearHerramienta(evento: any) {
     
 
-    this.selectValores = evento.target.value.split("-.-");
+    /* this.selectValores = .split("-.-"); */
     
-    this.selectedHerramienta?.push(this.selectValores);
+    this.selectedHerramienta?.push(evento.target.value);
+
+    /* console.log(this.selectedHerramienta); */
+
+
+
+    /* console.log(this.projectsForm); */
+
+ 
+   /*  this.newProjects.id_herramientas.push(this.selectValores); */
+
 
     /* console.log(this.selectedHerramienta); */
 

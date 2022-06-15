@@ -20,7 +20,7 @@ export class ProjectsService {
     URL: "",
     image: "",
     _id: "",
-    id_herramientas: "",
+    id_herramientas: [],
   }
 
   public clearProjects() {
@@ -30,7 +30,7 @@ export class ProjectsService {
       URL: "",
       image: "",
       _id: "",
-      id_herramientas: "",
+      id_herramientas: [],
     }
   }
   

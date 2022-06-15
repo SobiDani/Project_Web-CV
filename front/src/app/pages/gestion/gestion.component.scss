@@ -51,5 +51,13 @@
         justify-content: center;
       }
 
+      select{
+        width: 70%;
+      }
+
+      select > option{
+       text-align: center;
+      }
+
 }
 
