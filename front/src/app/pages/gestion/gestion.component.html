@@ -24,9 +24,12 @@
       <div class="herramientasDiv" [innerHtml]="htmlToAdd">
       </div>
       <app-input [herramientasInfo]="selectedHerramienta"></app-input>
-      <button class="margin" type="submit"><span *ngIf="projectsID" >Actualizar</span><span *ngIf="!projectsID" >Crear</span></button>
+      <button class="margin, update" type="submit"><span *ngIf="projectsID" >Actualizar</span><span *ngIf="!projectsID" >Crear</span></button>
 
+      
+      <div class="button">
       <button class="margin borrar" *ngIf="projectsID" (click)="delete()" >Borrar Proyecto</button>
+    </div>
 
     </form>
     

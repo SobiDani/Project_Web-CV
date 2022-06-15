@@ -3,29 +3,38 @@
     border-radius: 30px;
     border: double 5px rgb(110, 110, 247);
     width: 40%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(0deg, rgba(64,122,226,1) 0%, rgba(45,253,247,1) 100%);
+
+
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.191) 0%, rgba(136, 229, 255, 0.178) 100%);
+
+    box-shadow: 1px 1px 17px -1px rgba(220, 194, 255, 0.5) inset;
+-webkit-box-shadow: 1px 1px 17px -1px rgba(220,194,255,0.5) inset;
+-moz-box-shadow: 1px 1px 17px -1px rgba(220,194,255,0.5) inset;
+    border-radius: 50px;
+
+    
 
     & form{
        
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
     }
 
     h2{
         text-align: center;
-        margin: 5vh;
         text-transform: uppercase;
         font-family: 'Charis SIL', serif;
       }
 
       .margin{
-        margin-bottom: 2em;
+        margin-bottom: 0.5em;
       }
 
       input {
@@ -36,16 +45,52 @@
         border-radius: 10px;
         border: 2px double rgba(28, 155, 252, 0.611);
       }
-      button{
-        width: 80%;
-        max-width: 125px;
-      margin: 2rem 0rem;
-      height: 2rem;
-      border-radius: 50px;
-      }
+   
+
+     
+        button {     display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 4%;
+          width: 100%;
+          color: #090909;
+          padding: 0em 2em;
+          font-size: 18px;
+          border-radius: 0.5em;
+          background: #41467e71;
+          border: 1px solid #233261;
+          transition: all .3s;
+          box-shadow: 6px 6px 12px #3a58b4,
+                      -6px -6px 12px #6788ee;
+                      p{
+                        font-size: 14px;
+                        color: rgb(165, 165, 165);
+                      }
+         }
+         
+         button:hover {
+          border: 1px solid rgb(47, 192, 255);
+         }
+         
+         button:active {
+          box-shadow: 4px 4px 12px #3a58b4,
+                      -4px -4px 12px #6788ee;
+         }
+      
+         .button{
+          margin-top: 1em;
+          width: 100%;
+          height: 5%;
+          display: flex;
+          justify-content: center;
+        }
       .borrar{
         background-color: red;
         color: white;
+        width: 150%;
+        height: 100%;
+        box-shadow: 6px 6px 12px #fa5959,
+        -6px -6px 12px #fa6543;
       }
       app-input{
         display: flex;
@@ -58,7 +103,7 @@
         max-width: 300px;
         text-align: center;
         width: 70%;
-        height: 9.6em;
+        height: 11.1em;
 
         option{
           border: dotted 1px black;

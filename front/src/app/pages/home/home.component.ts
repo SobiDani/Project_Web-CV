@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
         src: "https://cdn.wccftech.com/wp-content/uploads/2017/05/Shadows_Colossus_Art.jpg",
         alt: "Shadow of the Colossus"
       },
-      nombreTitular: "Adrian Sanchez Diaz",
+      nombreTitular: "Nombre Example",
       profesionTitular: "Full Stack Developer",
       slidePersonal: [
       {
