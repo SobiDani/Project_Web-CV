@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background: linear-gradient(0deg, rgba(64,122,226,1) 0%, rgba(45,253,247,1) 100%);
 
     & form{
        
@@ -33,6 +34,12 @@
         box-sizing: border-box;
         border-radius: 10px;
         border: 2px double rgba(28, 155, 252, 0.611);
+      }
+      button{
+        width: 80%;
+      margin: 2rem 0rem;
+      height: 2rem;
+      border-radius: 50px;
       }
 
 }
