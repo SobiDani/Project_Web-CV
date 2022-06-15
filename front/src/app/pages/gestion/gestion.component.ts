@@ -60,11 +60,14 @@ export class GestionComponent implements OnInit {
   
       alert("Projects edited");
     } else {
+      console.log(this.newProjects);
+      
       this.ProjectsService.postProjects(this.newProjects).subscribe();
       alert("Projects created");
+
     }
-    this.projectsForm.reset();
-    this.router.navigate(["/Projectss"]);
+   /*  this.projectsForm.reset(); */
+    this.router.navigate(["/projects"]);
 
   }
 
