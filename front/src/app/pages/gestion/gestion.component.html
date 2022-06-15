@@ -17,7 +17,7 @@
       <!-- <select  id="herramientas" [(ngModel)]="selectedHerramienta" (ngModelChange)="crearHerramienta($event)">
         <option *ngFor="let herramienta of herramientas"  [ngValue]="herramienta.name" >{{herramienta.name}}</option>
       </select> -->
-      <select  id="id_herramientas" formControlName="id_herramientas" size="5" multiple="true" >
+      <select  id="id_herramientas" formControlName="id_herramientas" size="5" multiple="true" (change)="crearHerramienta($event)">
         <option *ngFor="let herramienta of herramientas"  value="{{herramienta._id}}" >{{herramienta.name}}<img src="{{herramienta.ico}}"></option>
       </select>
       <!-- -.-{{herramienta.ico}}  (change)="crearHerramienta($event)" -->
