@@ -12,9 +12,23 @@
 
       <label for="company">Enlace Imagen</label>
       <input class="margin" type="text" id="image" formControlName="image" placeholder="Enlace Imagen"/>
+
+      <label  for="herramientas">Herramientas</label>
+      <!-- <select  id="herramientas" [(ngModel)]="selectedHerramienta" (ngModelChange)="crearHerramienta($event)">
+        <option *ngFor="let herramienta of herramientas"  [ngValue]="herramienta.name" >{{herramienta.name}}</option>
+      </select> -->
+      <select  id="herramientas" (change)="crearHerramienta($event)">
+        <option *ngFor="let herramienta of herramientas"  value="{{herramienta._id}}-.-{{herramienta.ico}}" >{{herramienta.name}}</option>
+      </select>
+      <div class="herramientasDiv" [innerHtml]="htmlToAdd">
+        
+        
+      </div>
+      <app-input [herramientasInfo]="selectedHerramienta"></app-input>
       <button class="margin" type="submit">Actualizar</button>
 
-      <button class="margin" *ngIf="projectsID" (click)="delete()">Borrar Proyecto</button>
+      <button class="margin borrar" *ngIf="projectsID" (click)="delete()" >Borrar Proyecto</button>
 
     </form>
+    
   </section>
