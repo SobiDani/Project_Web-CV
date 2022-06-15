@@ -1,9 +1,9 @@
-<h2>Projects</h2>
 <article *ngIf="projects">
     <figure *ngFor="let project of projects">
         <h3>{{project.name}}</h3>
         <img src="{{project.image}}" alt="{{project.name}}">
         <p>{{project.description}}</p>
+        <a target="_blank" href="{{project.URL}}">CLICK TO WATCH CODE</a>
         <app-herramientas class="herramientas" [herramientasInfo]="project.id_herramientas"></app-herramientas>
         
         <button (click)="editProject(project)">Edit</button>

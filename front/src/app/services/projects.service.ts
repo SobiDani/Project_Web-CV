@@ -49,6 +49,8 @@ export class ProjectsService {
   }
 
   public postProjects(newProjects: any) {
+    console.log(newProjects);
+    
     return this.http.post("http://localhost:8069/projects", newProjects)
   }
 
