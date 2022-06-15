@@ -15,3 +15,20 @@ export interface herramientasInterface{
     ico: String;
   }
 
+export interface bannersInterface {
+    imgTitular: ImageInterface;
+    logoTitular: ImageInterface;
+    nombreTitular: string;
+    profesionTitular: string;
+    slidePersonal: SlideInterface[]
+}
+
+export interface ImageInterface {
+    src: string,
+    alt: string
+}
+
+export interface SlideInterface {
+    text: string;
+    id: string
+}

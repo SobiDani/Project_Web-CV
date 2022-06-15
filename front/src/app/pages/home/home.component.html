@@ -1,1 +1,23 @@
-<p>home works!</p>
+
+<section class="banner" >
+    <diV class="banner_izq">
+        <img src="{{ bannerInfo.imgTitular.src }}" alt="{{ bannerInfo.imgTitular.alt }}">
+    </diV>
+    <div class="banner_der">
+        <div class="banner_der-titular">
+            <h2>{{ bannerInfo.nombreTitular }}</h2>
+            <p>{{ bannerInfo.profesionTitular }}<p>
+        </div>
+        <div class="banner_der-slide">
+            <ul class="slider">
+                <li *ngFor="let slide of bannerInfo.slidePersonal" id="{{ slide.id }}">{{ slide.text }}</li>
+             </ul>
+             
+             <nav>
+                <ul class="menu">
+                    <li *ngFor="let slide of bannerInfo.slidePersonal" ><a href="#{{ slide.id }}">●</a></li>
+                </ul>
+            </nav>  
+        </div>
+    </div>
+</section>
