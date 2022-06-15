@@ -12,7 +12,7 @@
 
       <label for="company">Enlace Imagen</label>
       <input class="margin" type="text" id="image" formControlName="image" placeholder="Enlace Imagen"/>
-      <button class="margin" type="submit">Actualizar</button>
+      <button class="margin" *ngIf="!projectsID" type="submit">Actualizar</button>
 
       <button class="margin" *ngIf="projectsID" (click)="delete()">Borrar Proyecto</button>
 
