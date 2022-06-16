@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigator',
@@ -17,8 +18,9 @@ export class NavigatorComponent implements OnInit {
     id_herramientas: [],
   }
   public projectsForm!: FormGroup;
+  public gestionOn?: boolean;
 
-  constructor(private ProjectsService: ProjectsService, private formBuilder: FormBuilder) { }
+  constructor(private ProjectsService: ProjectsService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -37,7 +39,11 @@ export class NavigatorComponent implements OnInit {
       });
       alert('borrando');
       this.projectsForm.reset(true); */
-      location.reload();
+      this.gestionOn = true;
+      
+      /* location.reload();
+      this.router.navigate(["/gestion"]); */
+      
     }
     
   alert("Respeta, no borres cosas ni metas nada");
