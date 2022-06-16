@@ -32,16 +32,7 @@ export class ProjectsService {
     id_herramientas: [],
   }
 
-  public clearProjects() {
-    this.ProjectsData = {
-      name: "",
-      description: "",
-      URL: "",
-      image: "",
-      _id: "",
-      id_herramientas: [],
-    }
-  }
+  
   
   public editItem(item: any) {
     this.ProjectsData = item;
@@ -64,5 +55,17 @@ export class ProjectsService {
 
   public deleteProjects(projectsID: any){
     return this.http.delete("http://localhost:8069/projects/" + projectsID)
+  }
+
+
+  public clearProjects() {
+    this.ProjectsData = {
+      name: "",
+      description: "",
+      URL: "",
+      image: "",
+      _id: "",
+      id_herramientas: [],
+    }
   }
 }
