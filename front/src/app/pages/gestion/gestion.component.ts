@@ -21,6 +21,8 @@ export class GestionComponent implements OnInit {
   public htmlToAdd?: any;
   public objetoHerramienta?: any;
 
+  public gestionOn?: boolean;
+
   constructor(private formBuilder: FormBuilder, private HerramientasService: ProjectsService, private ProjectsService: ProjectsService, private router: Router) {
     this.formBuilder.group({
       name: String,
@@ -33,7 +35,10 @@ export class GestionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    
+    alert(this.gestionOn);
+    if(this.gestionOn){
+      location.reload();
+    }
     this.ProjectsService.clearProjects();
     this.projectsForm = this.formBuilder.group({
       name: [this.newProjects.name, [Validators.required, Validators.minLength(1)]],
