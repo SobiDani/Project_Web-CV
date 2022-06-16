@@ -76,7 +76,7 @@ const deleteProjects = async (req, res, next) => {
       // patchProjects.autor =[...cuadroData.autor, ...patchCuadro.autor]
 
       if (ProjectsData.image.link) {
-        deleteFile(ProjectsData.image.link);
+        /* deleteFile(ProjectsData.image.link); */
         }
 
       if (req.file) {

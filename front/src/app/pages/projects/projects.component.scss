@@ -36,12 +36,16 @@ article {
     .imgP{
       margin: 1.5rem 0rem;
       height: 16em;
-      width: fit-content;
+      width: 90%;
       border-radius: 30px;
       -webkit-filter: drop-shadow(2px 2px 0 #003893)
         drop-shadow(-2px -2px 0 #003893);
       filter: drop-shadow(2px 2px 0 #003893) drop-shadow(-2px -2px 0 #003893);
+      img{
+      width: 100%;
     }
+    }
+    
     p{
       margin: 0.5rem 0 1rem 0;
       padding: 1rem;
