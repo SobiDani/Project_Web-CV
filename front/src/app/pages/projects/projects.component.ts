@@ -27,6 +27,10 @@ export class ProjectsComponent implements OnInit {
     })
   }
 
+  click() {
+    alert("Respeta, no borres cosas ni metas nada");
+  }
+
   public editProject(project: any){
     this.projecstService.editItem(project)
     this.visibleEdit = true;
