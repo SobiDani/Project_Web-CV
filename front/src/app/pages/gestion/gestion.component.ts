@@ -35,7 +35,6 @@ export class GestionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    alert(this.gestionOn);
     if(this.gestionOn){
       location.reload();
     }
