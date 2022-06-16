@@ -17,26 +17,26 @@ export class HomeComponent implements OnInit {
   constructor(private HerramientasService: ProjectsService) {
     this.bannerInfo = {
       imgTitular: {
-        src: "https://cdn.wccftech.com/wp-content/uploads/2017/05/Shadows_Colossus_Art.jpg",
+        src: "https://res.cloudinary.com/dzivvzwq0/image/upload/v1654004338/nombreDeVuestraCarpeta/pipsxskggkfrn8otd4ui.jpg",
         alt: "Shadow of the Colossus"
       },
       logoTitular: {
-        src: "https://cdn.wccftech.com/wp-content/uploads/2017/05/Shadows_Colossus_Art.jpg",
+        src: "https://res.cloudinary.com/dzivvzwq0/image/upload/v1654004338/nombreDeVuestraCarpeta/pipsxskggkfrn8otd4ui.jpg",
         alt: "Shadow of the Colossus"
       },
-      nombreTitular: "Nombre Example",
+      nombreTitular: "Daniel Jara",
       profesionTitular: "Full Stack Developer",
       slidePersonal: [
       {
-        text: "textlor lorem100 asdsad asd asdasdsadasasdas sadsadasd asdsadsadsad",
+        text: "·The purpose of this project is to be able to show all the projects I have made, storing them in my own database,showing an example, whith a small description, the link to see the code and the tools used.",
         id: "primero"
       }, 
       {
-        text: "segundo lorem100 asdsad asd asdasdsadasasdas sadsadasd asdsadsadsad",
+        text: "·The functionalities of this project are to be able to add any new work done from the page and send it directly to the database without going through it. In addition to this, if there has been a mistake when writing it, you will have the possibility to edit or even delet it, as I said before, without touching the database",
         id: "segundo"
       }, 
       {
-        text: "tercero lorem100 asdsad asd asdasdsadasasdas sadsadasd asdsadsadsad",
+        text: "·In short, thanks to this page I can update my portfolio without any effort",
         id: "tercero"
       }
       ]  

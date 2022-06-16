@@ -3,13 +3,16 @@
     display: flex;
     width: 100%;
     margin-bottom: 100vh;
+    
 
     &_izq {
-        margin: 17em 6em;
+        margin: 13em 6em;
         width: 20%;
 
         &>img {
             width: 100%;
+            border-radius: 1000px;
+            
         }
     }
 
@@ -19,56 +22,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        &-slide {
-            width: 30rem;
+
+        h2{
+            font-size: 2.5em;
+            margin-bottom: 3em;
             text-align: center;
-            padding: 2rem;
-        }
-        nav a:hover {
-            background-color: #00324b;
-            color: #fff;
-            border-top-color: #65bce8;
-        }
-        
-        nav a:active {
-            border-top-color: #f90;
+            margin-top: 1em;
         }
 
-  
-
-        &-slide {
-            width: 30rem;
+        p{
+            font-size: 2em;
+            margin-bottom: 3em;
             text-align: center;
-            padding: 2rem;
-            &>ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                overflow: auto;
-                gap: 100px;
-                & > li > p {
-                    width: 19rem;
-                    text-align: center;
-                    padding: 2px;
-                }
-            }
         }
-        & nav > ul{
-            display: flex;
-                flex-direction: row;
-                justify-content: center;
-                overflow: auto;
-                gap: 100px;
-                
-        }
-        &>div>ul>li {
-            border: 3px solid black;
 
+        li{
+            font-size: 1.5em;
+            margin-bottom: 2em;
+            text-align: center;
         }
-        &>div>a {
-            margin: 3px 7px;
-            
 
-        }
     }
+
 }
